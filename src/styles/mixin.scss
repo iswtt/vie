@@ -1,0 +1,132 @@
+@mixin rounded($radius) {
+  -webkit-border-radius: $radius;
+  -moz-border-radius: $radius;
+  border-radius: $radius;
+}
+@mixin shadow($x, $y, $blur, $color) {
+  -webkit-box-shadow: $x $y $blur $color;
+  -moz-box-shadow: $x $y $blur $color;
+  box-shadow: $x $y $blur $color;
+}
+@mixin shadow-inset($x, $y, $blur, $color) {
+  -webkit-box-shadow: inset $x $y $blur $color;
+  -moz-box-shadow: inset $x $y $blur $color;
+  box-shadow: inset $x $y $blur $color;
+}
+@mixin transition($property) {
+  -webkit-transition: $property 0.2s ease;
+  -moz-transition: $property 0.2s ease;
+  -o-transition: $property 0.2s ease;
+  transition: $property 0.2s ease;
+}
+@mixin box-sizing {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+@mixin linear-gradient($from, $to) {
+  background-color: $to;
+  background-image: -moz-linear-gradient($from, $to);
+  background-image: -o-linear-gradient($from, $to);
+  background-image: -webkit-gradient(
+    linear,
+    left top,
+    left bottom,
+    color-stop(0, $from),
+    color-stop(1, $to)
+  );
+  background-image: -webkit-linear-gradient($from, $to);
+  background-image: -ms-linear-gradient($from, $to);
+  background-image: linear-gradient($from, $to);
+}
+
+@mixin flex($dir: row, $juc: center, $ali: center) {
+  display: flex;
+  flex-direction: $dir;
+  justify-content: $juc;
+  align-items: $ali;
+}
+
+
+@mixin layout(
+  $col: $inputCol,
+  $wrap: "true",
+  $inputSize: $small,
+  $btnSize: $btnSmall
+) {
+  // 有且仅有 一个查询条件的时候 $col, $wrap传参数(1, 'fasle')意思为 只有一个按钮和文本框的时候不换行
+  // 剩下的情况只用传col一个参数 每行放置几列(换行)
+  // $inputSize为文本框的高度有四种类型在setting中设置
+  @include flex(row, flex-start, flex-end);
+  @if ($wrap == "true") {
+    .search-form-item {
+      width: ($all / $col) - 2%;
+      // (总宽度-(每个查询input宽度*每行总数input)) / (每行总数 - 1)
+      margin-right: ($all - ((($all / $col) - 2%) * $col)) / ($col - 1);
+      // 每行最后一个清除右间距
+      &:nth-child(#{$col}n) {
+        margin-right: 0;
+      }
+    }
+    flex-wrap: wrap;
+  } @else {
+    flex-wrap: nowrap;
+  }
+  // 查询按钮位置
+  .search-form-btn {
+    .el-form-item__content {
+      text-align: $btnPosition;
+      .el-button {
+        padding: $btnSize;
+      }
+    }
+  }
+  // 日期input高度
+  .el-form-item.search-form-item {
+    .el-form-item__content {
+      line-height: 0;
+    }
+  }
+  .el-date-editor,
+  .el-input__icon {
+    height: $inputSize;
+    line-height: $inputSize;
+  }
+  .el-range-separator {
+    height: $inputSize !important;
+  }
+  // label、错误提示位置
+  .search-form-label,
+  .el-form-item__error {
+    text-align: $labelError;
+  }
+  // input高度
+  .search-form-input {
+    .el-input__inner {
+      height: $inputSize;
+      line-height: $inputSize;
+    }
+  }
+  // input下间距
+  .el-form-item {
+    margin-bottom: $inputSize / 2;
+  }
+  // label高度
+  .el-form-item__label {
+    line-height: $inputSize;
+  }
+  // 每行排列一个查询的时候 宽度占满
+  @if $col == 1 {
+    .search-form-item {
+      width: $all;
+    }
+  }
+}
+
+//考培项目
+@mixin tableBorder($width: $all, $collapse: collapse, $spacing: 0, $background: #fff) {
+  width: $width;
+  border-collapse: $collapse;
+  border-spacing: $spacing;
+  background: $background;
+}

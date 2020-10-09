@@ -1,0 +1,87 @@
+.search-form-label {
+  width: $all;
+  display: block;
+  text-align: left;
+}
+.search-form-input {
+  z-index: 20;
+  margin: 0;
+  width: $all !important;
+}
+.search-form-btn {
+  width: $all;
+  margin-bottom: $dis10;
+  @include box-sizing();
+}
+// 错误提示位置
+.el-form-item__error {
+  width: $all;
+  text-align: $labelError;
+}
+// 模态框按钮居中
+.modal-dialog {
+  .search-form-btn {
+    .el-form-item__content {
+      // text-align: center !important;
+    }
+  }
+}
+@media screen and (max-width: 1640px) {
+  // 小屏
+  // .toggle-menu {
+  //   display: block !important;
+  // }
+  .el-dialog {
+    width: $all * 0.8 !important;
+  }
+  .infolist {
+    @include box-sizing;
+    height: calc(100% - 36px);
+    .search-form {
+      height: $all;
+      width: $all;
+      padding: $dis10 $dis10 * 2;
+      box-sizing: border-box !important;
+      display: flex !important;
+      width: $all !important;
+      overflow: hidden !important;
+    }
+    .search-form-btn {
+      @include flex(row, flex-end, center);
+      .el-form-item__content {
+        width: $all;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1640px) {
+  // 大屏
+  .extend-panel-Q {
+    width: $all * 0.2;
+    margin-right: $dis10;
+    justify-content: flex-start;
+  }
+  .extend-panel-L {
+    width: calc(80% - 10px);
+    justify-content: flex-start;
+  }
+  .infolist {
+    @include box-sizing;
+    height: calc(100% - 36px);
+    display: flex;
+    .search-form {
+      height: $all;
+      width: $all;
+      padding: $dis10 $dis10 * 2;
+      @include box-sizing();
+    }
+    .search-form-item {
+      margin-right: $importantZero;
+      width: $all !important;
+    }
+    .search-form-btn {
+      @include flex();
+    }
+  }
+}

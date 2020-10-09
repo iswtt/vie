@@ -1,0 +1,67 @@
+.extend-manage {
+  @include flex(column);
+  border: #dddddd solid 1px;
+  border-bottom: #dddddd solid 0px;
+  overflow: hidden;
+  // margin-bottom: $dis10;
+  // border-radius: 4px;
+}
+
+.extend-manage-title {
+  width: $all;
+  padding-top: 0;
+  position: relative;
+  @include flex(row,space-between,center);
+}
+.extend-manage-title-left {
+  height: 30px;
+  line-height: 33px;
+  color: #035493;
+  font-size: 16px;
+  font-weight: bold;
+  align-self: flex-start;
+  padding-right: 50px;
+  padding-left: 14px;
+}
+.extend-manage-title-right {
+  margin-right: $margin;
+  .el-button--mini{
+      padding: 4px 15px;
+  };
+  .dropdown-style{
+      margin-left: $dis10;
+  }
+}
+.extend-bar {
+  width: $all;
+  height: $all;
+  overflow: hidden;
+}
+.extend-model-dialog {
+  @media screen and (max-width:1500px){
+      .el-dialog{
+          width: 80%;
+      }
+  }
+}
+/**重置element-ui 子菜单样式**/
+.el-menu-item-group__title{
+  padding: 0!important;
+}
+.el-menu--popup-right-start {
+  margin-left: 0;
+  margin-right: 0
+}
+.el-form-item.is-required .el-form-item__label:after {
+  content: '*';
+  color: #f56c6c;
+  margin-left: 4px;
+}
+.el-form-item.is-required .el-form-item__label:before {
+  display: none;
+}
+.el-menu--collapse .el-submenu.is-active,
+.el-menu--collapse .el-submenu.is-opened,
+.el-menu-item.is-active{
+   background: rgba(18,70,89,0.8)!important
+}

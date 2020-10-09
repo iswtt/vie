@@ -1,0 +1,243 @@
+// 登录页
+@mixin loginBg() {
+  [data-theme='blue'] & {
+    background: $login no-repeat center;
+    background-size: $all $all;
+  }
+  [data-theme='red'] & {
+    background: $login_RED no-repeat center;
+    background-size: $all $all;
+  }
+}
+@mixin loginFormBg() {
+  [data-theme='blue'] & {
+    background: $loginFormBg;
+    box-shadow: 0 0 200px $loginFormBg;
+  }
+  [data-theme='red'] & {
+    background: $loginFormBg_RED;
+    box-shadow: 0 0 200px $loginFormBg_RED;
+  }
+}
+@mixin loginFormItemBorder() {
+  [data-theme='blue'] & {
+    border-bottom: 1px solid $primary;
+  }
+  [data-theme='red'] & {
+    border-bottom: 1px solid $primary_RED;
+  }
+}
+// 九宫格页面
+@mixin menusBg() {
+  [data-theme='blue'] & {
+    background: $menuImg no-repeat;
+    background-size: $all $all;
+  }
+  [data-theme='red'] & {
+    background: $menuImg_RED no-repeat;
+    background-size: $all $all;
+  }
+}
+// 按钮
+@mixin primaryBtn() {
+  [data-theme='blue'] & {
+    background-color: $primary !important;
+    border-color: $primary !important;
+  }
+  [data-theme='red'] & {
+    background-color: $primary_RED !important;
+    border-color:$primary_RED !important;
+  }
+}
+@mixin primaryBtnFocus() {
+  [data-theme='blue'] & {
+    background-color: $darkPrimary !important;
+    border-color: $darkPrimary !important;
+  }
+  [data-theme='red'] & {
+    background-color:$darkPrimary_RED !important;
+    border-color:$darkPrimary_RED !important;
+  }
+}
+// 树结构
+@mixin treeNodeHighlight() {
+  [data-theme='blue'] & {
+    background: $primary;
+  }
+  [data-theme='red'] & {
+    background: $primary_RED;
+  }
+}
+// 菜单
+@mixin menuActive() { // 一级菜单激活状态
+  [data-theme='blue'] & {
+    background: rgba(18, 70, 89, 0.8) !important;
+  }
+  [data-theme='red'] & {
+    background: $asideHover_RED;
+  }
+}
+@mixin asideHoverActive() { // 二级菜单激活状态
+  [data-theme='blue'] & {
+    background-color: $asideHoverbg;
+    color: $asideHoverText;
+  }
+  [data-theme='red'] & {
+    background-color: $primary_RED!important;
+    color: $white;
+  }
+}
+@mixin asideHover() {
+  [data-theme='blue'] & {
+    background-color:rgba(18,70,89,1) !important;
+  }
+  [data-theme='red'] & {
+    background: $asideHover_RED;
+  }
+}
+@mixin sideMenuBg() {
+  [data-theme='blue'] & {
+    background: $LinearGradient;
+  }
+  [data-theme='red'] & {
+    background: $LinearGradient_RED;
+  }
+}
+@mixin iconfontColor() {
+  [data-theme='blue'] & {
+    color: $primary;
+  }
+  [data-theme='red'] & {
+    color: $asideText_RED;
+  }
+}
+// header部分
+@mixin headerBg() {
+  [data-theme='blue'] & {
+    background: $headerImg no-repeat;
+    background-size: $all $all;
+  }
+  [data-theme='red'] & {
+    background: $headerImg_RED no-repeat;
+    background-size: $all $all;
+  }
+}
+// title背景
+@mixin panelTitleLeft() {
+  [data-theme='blue'] & {
+    background: $titleLeftUrl no-repeat right -9px;
+  }
+  [data-theme='red'] & {
+    background: $titleLeftUrl_RED no-repeat right -9px;
+  }
+}
+// 文字颜色设置
+@mixin setColor() {
+  [data-theme='blue'] & {
+    color: $primary;
+  }
+  [data-theme='red'] & {
+    color: $primary_RED;
+  }
+}
+// 欢迎页面背景
+@mixin welcomeBg() {
+  [data-theme='blue'] & {
+    background: $welcomeImg;
+    background-size: $all $all;
+  }
+  [data-theme='red'] & {
+    background: $welcomeImg_RED;
+    background-size: $all $all;
+  }
+}
+// 考培系统欢迎页面背景
+@mixin welcomeBg_TRA() {
+  [data-theme='blue'] & {
+    background: $welcomeImg_TRA;
+    background-size: $all $all;
+  }
+  [data-theme='red'] & {
+    background: $welcomeImg_RED_TRA;
+    background-size: $all $all;
+  }
+}
+@mixin setTextColor() {
+  [data-theme='blue'] & {
+    color: $primary;
+  }
+  [data-theme='red'] & {
+    color: $welcomeColor_RED;
+  }
+}
+// 表格操作按钮颜色
+@mixin setOperateColor() {
+  [data-theme='blue'] & {
+    color: $tableEdit;
+  }
+  [data-theme='red'] & {
+    color: $primary_RED;
+  }
+}
+// 监管地图title
+@mixin mapTitleBg() {
+  [data-theme='blue'] & {
+    background: $dmsMapTitleBg no-repeat;
+    background-position: center -9px;
+  }
+  [data-theme='red'] & {
+    background: $dmsMapTitleBg_RED no-repeat;
+    background-position: center -9px;
+  }
+}
+@mixin mapChartBorder() {
+  [data-theme='blue'] & {
+    border: 1px solid $dmsChartBorder;
+  }
+  [data-theme='red'] & {
+    border: 1px solid $primary_RED;
+  }
+}
+@mixin mapChartTitleBg() {
+  [data-theme='blue'] & {
+    background: $LinearGradientChart;
+  }
+  [data-theme='red'] & {
+    background: $LinearGradientChart_RED;
+  }
+}
+//考培
+@mixin exerciseLook() {
+  [data-theme='blue'] & {
+    font-size: 20px;
+    color: #3697ff;
+  }
+  [data-theme='red'] & {
+    font-size: 20px;
+    color: #ff8080;
+  }
+}
+@mixin exerciseHook() {
+  [data-theme='blue'] & {
+    font-size: 20px;
+    color: #3697ff;
+    font-weight: bold;
+  }
+  [data-theme='red'] & {
+    font-size: 20px;
+    color: #ff8080;
+    font-weight: bold;
+  }
+}
+@mixin exerciseCross() {
+  [data-theme='blue'] & {
+    font-size: 20px;
+    color: #ff8080;
+    font-weight: bold;
+  }
+  [data-theme='red'] & {
+    font-size: 20px;
+    color: #3697ff;
+    font-weight: bold;
+  }
+}

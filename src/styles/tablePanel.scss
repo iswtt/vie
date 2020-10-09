@@ -1,0 +1,34 @@
+.tablebox {
+  width: $all;
+  height: $all;
+  padding: $dis10;
+  @include box-sizing;
+}
+.editTable {
+  margin: 0 $dis10;
+  font-weight: bold;
+  @include setOperateColor();
+  cursor: pointer;
+}
+.tableComp {
+  box-sizing: border-box;
+  padding: $dis10;
+}
+// 审图详情页table样式
+.detailTable {
+  height: 129px;
+  overflow: auto;
+  padding: 0px;
+  margin: 10px 0px;
+  .el-table td, .el-table th{
+    padding:1px 0
+  }
+}
+.el-table{
+  .cell{
+    white-space: pre!important;
+  }
+  .el-tooltip{
+    white-space: pre!important;
+  }
+}

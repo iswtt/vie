@@ -1,0 +1,42 @@
+.countBox {
+    padding-bottom: 10px;
+    text-align: left;
+    .color-blue {
+      background: #45aadd;
+    }
+    .color-green {
+      background: #3dca84;
+    }
+    .color-grass {
+      background: #0baf5e;
+    }
+    .color-yellow{
+      background: #f2cc0f;
+    }
+    .color-red {
+      background: #f17680;
+    }
+    .content {
+      border-radius: 4px;
+      // line-height: 90px;
+      color: #f9fafc;
+      min-width: 260px;
+      height: 90px;
+      display:inline-block;
+      text-align: center;
+      margin:0 6px;
+      font-weight:bold;
+      font-size: $headerRight;
+      padding: 0 10px;
+      position: relative;
+      .smallBox {
+        width: $all;
+        height: $all;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 10;
+        @include flex(column, center, center);
+      }
+    }
+  }

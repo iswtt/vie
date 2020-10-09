@@ -1,0 +1,132 @@
+// 开关设置
+//-----------------------------------------------------	
+$lte7:                  true !default; //是否兼容ie6-7
+$filter:                false !default; //是否为ie6-8开启css3滤镜兼容，常用于渐变背景 
+
+// 基本颜色
+// color function 
+//-----------------------------------------------------	
+$black:                 #000 !default;
+$grayDarker:            #333 !default;
+$grayDark:              #999 !default; // 主要边框
+$gray:                  #ccc !default; // 次要边框
+$grayLight:             #f5f5f5 !default;
+$white:                 #fff !default;
+
+$red:                   #cc3300 !default;
+$blueDark:              #0064cd !default;
+$orange:                #F47837 !default;
+$green:                 #51B148 !default;
+$yellow:                #ffc40d !default;
+$pink:                  #c3325f !default;
+$purple:                #7a43b6 !default;
+
+$primary:               #1782d4 !default;//主色
+$darkPrimary:           #1167a9 !default;//hover主色
+$success:               #67c23a !default;//成功
+$wraning:               #e6a23c !default;//警告
+$danger:                #f56c6c !default;//危险
+$info:                  #909399 !default;//消息
+$tableOperation:        #2da8cf !default;//表格操作
+$tableEdit:             #00A3CF !default;//表格编辑颜色
+
+$firBorder:             #999 !default;//主要边框
+$secBorder:             #ccc !default;//次要边框
+$thiBorder:             #EBEEF5 !default;//三级边框
+$fouBorder:             #F2f6fc !default;//四级边框
+
+$text1:                 #303133 !default;//主要文字
+$text2:                 #606266 !default;//常规文字
+
+$asideHoverbg:          #036db7 !important;//侧边栏hover背景色
+$asideHoverText:        #00abff !important;//侧边栏hover文本颜色
+
+$detailBorder:          #ddd !important; 
+$detailtitlebg:         #f2f2f2 !important; 
+
+$loginFormBg:           #263645 !important;//登录页面form表单背景
+
+$footer:                #3b434c !important;//footer背景
+$footerText:            #a2abb7 !important;//footer文字背景
+
+$dmsChartBorder:        #1573c1;//监管地图统计图表外边框颜色
+
+//基本数值
+//---------------------------------------------------------
+$all:                   100%      !default;
+$right:                 20px;
+$half:                  50%;
+$welcomeTitle:          60px      !default;//页面欢迎标题
+$headerTitle:           32px      !default;//Header主标题
+$headerRight:           20px      !default;//header右侧icon和字体    
+$title:                 18px      !default;//副标题 弹窗标题头
+$smallTitle:            16px      !default;//小标题 区块标题（类似查询，分类列表这类标题）
+$texts:                 14px      !default;//正文 导航文字 表单label 表格表头
+$smallText:             13px      !default;//正文小
+$infoText:              12px      !default;//辅助文字
+$dialogMin:             600px     !default;//最小弹窗大小
+$dis10:                 10px      !default;
+$margin:                20px      !default;
+$logoSize:              30px 15px/120px !default;// logo尺寸大小
+
+$headerHeight:          80px      !default;//header高度
+$asideWidth:            70px      !important;//侧边栏宽度
+$footHeight:            36px      !default;//底部高度
+
+// 查询
+$inputCol:              3         !default;// 默认每行几个查询框
+$btnPosition:           right     !default;// 默认查询按钮位置
+$labelError:            left      !default;// label以及错误信息位置
+$large:                 40px      !default;// input高度
+$medium:                36px      !default;// input高度
+$small:                 32px      !default;// input高度
+$mini:                  28px      !default;// input高度
+$btnLarge:              12px 20px !default;// 大按钮
+$btnMedium:             10px 18px !default;// 中等按钮
+$btnSmall:              8px 16px  !default;// 小按钮
+$btnMini:               6px 14px  !default;// 最小按钮
+// 穿梭框
+$transferWidth:         400px     !default;// 穿梭框宽度
+$transferHeight:        200px     !default;// 穿梭框高度
+
+
+$importantZero:         0px       !important;
+
+$smallTitleLine:        24px      !important; // 行高
+$topLine:               -webkit-gradient(linear, 0% 0%, 100% 0%, from(rgba(255,255,255,0)), to(rgba(255,255,255,1)))!default;//错误页面上边白线条
+$bottomLine:            -webkit-gradient(linear, 100% 0%, 0% 0%, from(rgba(255,255,255,0)), to(rgba(255,255,255,1)))!default;//错误页面下边白线
+$LinearGradient:        linear-gradient(to right, #0b5c82 0%,#0b3168 49%,#0b2362 100%)!default;// 侧边栏渐变
+$LinearGradientChart:   linear-gradient(to right,#195695, #080917)!default;// 统计图表表头背景
+
+// 详情页面
+$detailMargin:          5px 20px 20px 20px     !default;
+
+//基本图像
+//---------------------------------------------------------
+$logo: url('../../assets/img/common/logo.png')!default;//logo 图像
+$titleUrl: url('../assets/img/common/titlebg_04.jpg')!default;// 标题背景
+$titleUrlImg: url('../../assets/img/common/titlebg_04.jpg')!default;// 标题背景
+$swiper: url('../assets/img/common/swiper.png')!default;// 图像查看背景
+$headerImg: url('../../assets/img/blue/common/headerbg.jpg')!default; //头图像
+$login: url('../../assets/img/blue/common/login_bg.jpg')!default; //登录背景图像
+$titleLeftUrl: url('../assets/img/blue/common/titlebg_03.png')!default;// 标题左侧背景
+$menuImg: url('../../assets/img/blue/common/bg.jpg')!default;//九宫格背景图
+$welcomeImg:url('../../assets/img/blue/common/welcome.png')!default;//欢迎图像
+$welcomeImg_TRA:url('../../../assets/img/blue/common/welcome.png')!default;//欢迎图像
+
+$swiperImgAudio: url('../assets/swiper/audio.png')!default;//swiper视图相关图片
+$swiperImgBtnLarge: url('../assets/swiper/swiper_button_large.png')!default;//swiper视图相关图片
+$swiperImgBtnCircle: url('../assets/swiper/swiper_button_circle.png')!default;//swiper视图相关图片
+$swiperImgBtnBold: url('../assets/swiper/swiper_button_bold.png')!default;//swiper视图相关图片
+$swiperImgBtnShadow: url('../assets/swiper/swiper_button_shadow.png')!default;//swiper视图相关图片
+
+$dmsChartBg:url('../../assets/img/blue/supervise/border.png')!default;//监管统计图表背景图
+$dmsChartTitleBg:url('../../assets/img/blue/supervise/title-bg.png')!default;//监管统计图表title背景图
+$dmsMapTitleBg:url('../../assets/img/blue/supervise/header.png')!default;//监管地图页面title背景图
+$dmsStatisticPortBg: url('../../assets/img/blue/supervise/port.png')!default;//监管(原)大屏统计页面图片
+$dmsStatisticBreadBg: url('../../assets/img/blue/supervise/bread.png')!default;//监管(原)大屏统计页面图片
+$dmsStatisticBg: url('../../assets/img/blue/supervise/bg.png')!default;//监管(原)大屏统计页面图片
+$dmsStatisticPositionBg: url('../../assets/img/blue/supervise/portPosition.png')!default;//监管(原)大屏统计页面图片
+$dmsStatisticCustomBg: url('../../assets/img/blue/supervise/custom.png')!default;//监管(原)大屏统计页面图片
+
+$templateMapBg: url('../assets/img/common/map.png')!default;// 监管模板管理地图示例图
